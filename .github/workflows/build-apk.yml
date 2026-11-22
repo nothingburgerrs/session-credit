@@ -25,23 +25,29 @@ jobs:
       - name: Build
         run: gradle --no-daemon assembleDebug
 
-      - name: Rename APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk PhoneKeys.apk
+      - name: Rename APKs
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk PhoneKeys.apk
+          cp posecam/build/outputs/apk/debug/posecam-debug.apk PoseCam.apk
 
       - uses: actions/upload-artifact@v4
         with:
-          name: PhoneKeys-apk
-          path: PhoneKeys.apk
+          name: apks
+          path: |
+            PhoneKeys.apk
+            PoseCam.apk
 
       - name: Publish download link
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
-          name: PhoneKeys (latest build)
+          name: Latest builds
           prerelease: true
           make_latest: false
           target_commitish: ${{ github.sha }}
-          files: PhoneKeys.apk
+          files: |
+            PhoneKeys.apk
+            PoseCam.apk
           body: |
-            Open this page on your phone and tap **PhoneKeys.apk** to download it.
+            Open this page on your phone and tap the APK you want: **PhoneKeys.apk** or **PoseCam.apk**.
             Built from ${{ github.sha }}.

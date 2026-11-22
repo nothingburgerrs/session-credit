@@ -32,3 +32,23 @@ Next time, just open the app and tap **Connect to tablet**.
 - **The on-screen keyboard disappears on the tablet:** that's normal when a physical keyboard is connected. Samsung lets you turn the *Show on-screen keyboard* option back on in the same Physical keyboard settings.
 - Emoji and accented letters can't be sent; a real US keyboard can't type them either.
 - The typing sound plays on the **phone**, not the tablet.
+
+---
+
+# PoseCam
+
+A camera that puts a picture of a pose on top of the live view, so you can line yourself up and copy it.
+
+## Install
+Same as PhoneKeys: on the **Releases** page, open `latest` and tap **PoseCam.apk**. Needs Android 10 or newer.
+
+## How to use
+1. Tap **Choose pose** and pick a picture. You can also open a picture in Gallery, tap **Share** and pick **PoseCam**.
+2. Drag the pose picture to move it, pinch to resize, twist two fingers to rotate. Double-tap puts it back.
+3. Use the **See-through** slider to fade the picture in or out.
+4. **Outline** turns the picture into white lines, so you can see yourself clearly underneath.
+5. **Mirror** flips the pose left to right (useful with the selfie camera). **Flip camera** switches between back and front.
+6. Tap the shutter, or press a **volume button**. **Timer** gives you 3 or 10 seconds to get into position.
+7. Tap the little thumbnail to see your photo next to the pose. **Save side-by-side** saves both in one picture.
+
+Photos are saved to *Pictures › PoseCam*. The pose picture is not included in the photo.
